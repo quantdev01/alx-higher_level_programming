@@ -8,7 +8,8 @@ def uppercase(str):
                 to_lower = ord(x) + 32
                 x = chr(to_lower)
             if (x == ''):
-                x = ''
+                b = ord(x) + 3
+                x = chr(b)
             to_upper = ord(x) - 32
             x = chr(to_upper)
             print('{}'.format(x))
