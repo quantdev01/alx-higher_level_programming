@@ -7,6 +7,8 @@ def uppercase(str):
             if (ord(x) >= 32 and ord(x) <= 96):
                 to_lower = ord(x) + 32
                 x = chr(to_lower)
+            if (x == ''):
+                x = ''
             to_upper = ord(x) - 32
             x = chr(to_upper)
             print('{}'.format(x))
