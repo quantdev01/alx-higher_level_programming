@@ -9,7 +9,7 @@ def uppercase(str):
                 x = chr(to_lower)
             to_upper = ord(x) - 32
             x = chr(to_upper)
-            print('{}'.format(x))
+            print('{}\n'.format(x))
         else:
             y = str[i]
             if (ord(y) >= 32 and ord(y) <= 96):
