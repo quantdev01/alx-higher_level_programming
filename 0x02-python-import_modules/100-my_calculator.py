@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     if (lenstr < 4):
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
-        print(1)
+        exit(1)
     else:
         a = int(sys.argv[1])
         operator = sys.argv[2]
@@ -24,8 +24,7 @@ if __name__ == "__main__":
             s = div(a, b)
         else:
             print('Unknown operator. Available operators: +, -, * and /')
-            print(1)
-
+            exit(1)
         if (operator == '+' or operator == '-' or operator == '*' or operator == '/'):
             print(f'{a} {operator} {b} = {s}')
-            print(0)
+            exit(0)
