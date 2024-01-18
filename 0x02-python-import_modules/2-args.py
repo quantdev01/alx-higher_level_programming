@@ -8,8 +8,8 @@ if __name__ == ("__main__"):
         print('0 arguments.')
     else:
         if(lenstr <= 2):
-            print(f'{lenstr -1} argument:')
+            print('{} argument:'.format(lenstr - 1))
         else:
-            print(f'{lenstr -1} arguments:')
+            print('{} arguments:'.format(lenstr - 1))
         for i in range(1, len(sys.argv)):
             print(f'{i}: {sys.argv[i]}')
