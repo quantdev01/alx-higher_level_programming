@@ -5,11 +5,11 @@ if __name__ == ("__main__"):
     lenstr = len(sys.argv)
 
     if (lenstr == 1):
-        print('0 arguments.')
+        print('0 arguments.'.format())
     else:
         if(lenstr <= 2):
             print('{} argument:'.format(lenstr - 1))
         else:
             print('{} arguments:'.format(lenstr - 1))
         for i in range(1, len(sys.argv)):
-            print(f'{i}: {sys.argv[i]}')
+            print('{}: {}'.format(i, sys.argv[i]))
