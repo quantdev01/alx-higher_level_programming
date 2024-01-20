@@ -13,21 +13,20 @@ listint_t *insert_node(listint_t **head, const int n)
 {
 	listint_t *new;
 	listint_t *current;
-    listint_t *temp;
+	listint_t *temp;
 
 	current = *head;
 	if (*head == NULL)
 		return (NULL);
 	while (current->next != NULL)
-    {
-        if (current->n <= n)
-            temp = current;
-        current = current->next;
-    }
-    printf("This is the value of current n in the list %i", current->n);
+	{
+		if (current->n <= n)
+			temp = current;
+		current = current->next;
+	}
 	new = malloc(sizeof(listint_t));
-    if (head == NULL)
-       *head = new;
+	if (head == NULL)
+		*head = new;
 	if (new == NULL)
 		return (NULL);
 
