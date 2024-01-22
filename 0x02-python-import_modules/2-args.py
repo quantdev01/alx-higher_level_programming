@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if (lenstr == 1):
         print('0 arguments.'.format())
     else:
-        if(lenstr <= 2):
+        if (lenstr <= 2):
             print('{:d} argument:'.format(lenstr - 1))
         else:
             print('{:d} arguments:'.format(lenstr - 1))
