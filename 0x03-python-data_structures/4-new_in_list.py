@@ -8,10 +8,10 @@ def new_in_list(my_list, idx, element):
         return my_list
 
     new_list = []
-    #inserting in the new list the old list values
+    # inserting in the new list the old list values
     for i in range(len_list):
         new_list.append(my_list[i])
-    #removing and replacing the element
+    # removing and replacing the element
     new_list.pop(idx)
     new_list.insert(idx, element)
-    return new_list #returning the list
+    return new_list  # returning the list
