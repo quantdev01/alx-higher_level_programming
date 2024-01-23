@@ -7,16 +7,11 @@ def new_in_list(my_list, idx, element):
     if idx >= len(my_list):
         return my_list
 
-    print("Print in BEFORE function")
-    temp_list = my_list
-    print(my_list)
-    my_new_list = temp_list
-    my_new_list.pop(idx)
-    my_new_list.insert(idx, element)
-
-
-    print("Print in the function")
-
-    print(my_list)
-    
-    return my_new_list
+    new_list = []
+    #inserting in the new list the old list values
+    for i in range(len_list):
+        new_list.append(my_list[i])
+    #removing and replacing the element
+    new_list.pop(idx)
+    new_list.insert(idx, element)
+    return new_list #returning the list
