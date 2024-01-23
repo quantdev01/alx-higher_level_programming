@@ -1,8 +1,14 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    len_string = my_string
+    ln = len(my_string)
+    lists = []
 
-    for i in range(len_string):
-        if (len_string[i] == 'c' or len_string[i] == 'C'):
-            len_string.remove
+    # putting the my_string char in a list
+    # without the c
+    for i in range(ln):
+        if (my_string[i] == 'c' or my_string[i] == 'C'):
+            continue
+        lists.append(my_string[i])
+    # returning the joined string
+    return ''.join(lists)
