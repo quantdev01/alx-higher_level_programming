@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+def print_matrix_integer(matrix=[[]]):
+    if matrix is None:
+        return
+    else:
+        ln = len(matrix)
+        for i in range(ln):
+            for j in range(ln):
+                print("{}".format(matrix[i][j]), end=" ")
+            print()
