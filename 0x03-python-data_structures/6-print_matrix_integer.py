@@ -5,11 +5,13 @@ def print_matrix_integer(matrix=[[]]):
         print()
         return
     else:
-        ln = len(matrix[0])
+        ln_x = len(matrix)
+        ln_y = len(matrix[0])
+        # Displying the matrix on [i] [j] element
 
-        for i in range(len(matrix)):
-            for j in range(ln):
-                if (j != len(matrix) - 1):
+        for i in range(ln_x):
+            for j in range(ln_y):
+                if (j != ln_y - 1):
                     print("{:d}".format(matrix[i][j]), end=" ")
                 else:
                     print("{:d}".format(matrix[i][j], end=""))
