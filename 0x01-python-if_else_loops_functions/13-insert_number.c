@@ -23,7 +23,7 @@ listint_t *insert_node(listint_t **head, const int n)
 		*head = new;
 		return *head;
 	}
-	while (current->next != NULL)
+	while (current != NULL)
 	{
 		if (current->n <= n)
 			temp = current;
