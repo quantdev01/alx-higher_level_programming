@@ -2,12 +2,12 @@
 
 def max_integer(my_list=[]):
     n = 0
-    if my_list is None:
+    j = 0
+    if len(my_list) == 0:
         return None
 
-    j = 0
 
-    for i in range(0, len(my_list)):
+    for i in range(0, len(my_list) - 1):
         if i == len(my_list) - 1:
             break
         if (n > my_list[i+1]):
