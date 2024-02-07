@@ -2,6 +2,6 @@
 
 class Square:
     """The class does nothing just pass.
-    class attribute are not there
+    print(__import__("my_module").MyClass.__doc__)
     """
     pass
