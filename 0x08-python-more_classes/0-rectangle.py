@@ -3,6 +3,8 @@
 """
 Empty class module
 """
+
+
 class Rectangle:
     """
     class rectangle
