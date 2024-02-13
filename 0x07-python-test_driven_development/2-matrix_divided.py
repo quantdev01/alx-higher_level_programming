@@ -20,15 +20,6 @@ def matrix_divided(matrix, div):
         else:
             if t != len(matrix[item]):
                 raise TypeError("Each row of the matrix must have the same size")
-
-        
-    #Over here we itereate to change values to divided ones
-    for i in range(len(matrix)):
-        for j in range(len(matrix[0])):
-            newlist[i][j] = round(matrix[i][j] / div, 2)
-            if type(matrix[i][j]) != (int or float):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
     #Checkin for dive now
     if type(div) == int:
         pass
@@ -37,5 +28,15 @@ def matrix_divided(matrix, div):
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
+
+
+
+    #Over here we itereate to change values to divided ones
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            newlist[i][j] = round(matrix[i][j] / div, 2)
+            if type(matrix[i][j]) != (int or float):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+
 
     return newlist
