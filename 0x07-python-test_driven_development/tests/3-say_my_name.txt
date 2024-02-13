@@ -1,0 +1,17 @@
+-------------------------------
+		test
+-------------------------------
+::
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("Dan", "Kiyiki")
+	My name is Dan Kiyiki
+	>>> say_my_name(3 or True or False or 10.5, "Nicol")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+	>>> say_my_name("Dan", 3 or True or False or 4.60)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+	>>> say_my_name("Jack")
+	My name is Jack 
