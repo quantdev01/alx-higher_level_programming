@@ -13,3 +13,29 @@ try:
     print(add_integer(None))
 except Exception as e:
     print(e)
+
+try:
+    print(add_integer("Key", 6))
+except Exception as e:
+    print(e)
+
+print("Printing without None")
+
+try:
+    print(add_integer(4, None))
+except Exception as e:
+    print(e)
+
+try:
+    print(add_integer("gd", "nico"))
+except Exception as e:
+    print(e)
+
+try:
+    print(add_integer(None, None))
+except Exception as e:
+    print(e)
+try:
+    print(add_integer(True, 4))
+except Exception as e:
+    print(e)

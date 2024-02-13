@@ -11,5 +11,32 @@
 	-8
 	>>> add_integer(-4, 0)
 	-4
-	>>> add_integer(6, "Str")
-	b must be an integer
+	>>> add_integer("str", 5)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+	>>> add_integer(4, "new")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+	>>> add_integer("str", "str")
+	Traceback (most recent call last):
+		...
+	TypeError: a and b must be integers
+	>>> add_integer(True or False, "str")
+	Traceback (most recent call last):
+		...
+	TypeError: a and b must be integers
+	>>> add_integer("str", True or False)
+	Traceback (most recent call last):
+		...
+	TypeError: a and b must be integers
+
+	>>> add_integer(True or false, 6)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+	>>> add_integer(4, True or False)
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
