@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 My module
 """
@@ -7,7 +8,7 @@ def text_indentation(text):
     """
     function
     """
-    if type(text) != str:
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
     
     for c in range(len(text)):
