@@ -8,8 +8,6 @@ def say_my_name(first_name, last_name=""):
     """
     printing my name
     """
-    if first_name is None and last_name is None:
-        raise TypeError("missing elements")
     if type(first_name) != str and type(last_name) != str:
         raise TypeError("first and last name must be string")
     if type(first_name) != str:
