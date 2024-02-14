@@ -1,0 +1,6 @@
+------------Test---------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("My family is great: we are good")
+My family is great
+we are good
