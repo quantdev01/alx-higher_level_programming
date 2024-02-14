@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
     for item in range(len(matrix)):
         if type(matrix[item]) != list:
             raise TypeError("matrix must be a matrix\
-(list of lists) of integers/floats")
+ (list of lists) of integers/floats")
         if t == 0:
             t = len(matrix[item])
         else:
