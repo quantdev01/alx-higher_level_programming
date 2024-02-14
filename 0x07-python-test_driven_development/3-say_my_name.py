@@ -11,7 +11,7 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(first_name, str) and not isinstance(last_name, str):
         # if type(first_name) != str and type(last_name) != str:
         raise TypeError("first and last name must be string")
-    if not isinstance((first_name, str)):
+    if not isinstance(first_name, str):
         # if type(first_name) != str:
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
