@@ -65,7 +65,7 @@ class Rectangle:
 
         lines = ''
         for _ in range(self.__height):
-            lines += Rectangle.print_symbol * self.__width + '\n'
+            lines += str(self.print_symbol) * self.__width + '\n'
         return lines.rstrip('\n')
 
     def __repr__(self):
