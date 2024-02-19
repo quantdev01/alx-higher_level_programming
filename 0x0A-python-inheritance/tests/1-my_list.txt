@@ -6,10 +6,11 @@
 >>> mylist.append(6)
 >>> mylist.append(45)
 >>> mylist.append(33)
+>>> mylist.append(-3)
 >>> print(mylist)
-[1, 6, 45, 33]
+[1, 6, 45, 33, -3]
 >>> mylist.print_sorted()
-[1, 6, 33, 45]
+[-3, 1, 6, 33, 45]
 >>> mylist = MyList([6, 4, 4, 10, 7])
 >>> mylist.print_sorted()
 [4, 4, 6, 7, 10]
