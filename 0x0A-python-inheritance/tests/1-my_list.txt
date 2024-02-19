@@ -1,0 +1,15 @@
+------------Test-----------
+
+>>> MyList = __import__('1-my_list').MyList
+>>> mylist = MyList()
+>>> mylist.append(1)
+>>> mylist.append(6)
+>>> mylist.append(45)
+>>> mylist.append(33)
+>>> print(mylist)
+[1, 6, 45, 33]
+>>> mylist.print_sorted()
+[1, 6, 33, 45]
+>>> mylist = MyList([6, 4, 4, 10, 7])
+>>> mylist.print_sorted()
+[4, 4, 6, 7, 10]
