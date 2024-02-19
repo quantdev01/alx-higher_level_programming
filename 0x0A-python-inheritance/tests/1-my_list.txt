@@ -13,3 +13,8 @@
 >>> mylist = MyList([6, 4, 4, 10, 7])
 >>> mylist.print_sorted()
 [4, 4, 6, 7, 10]
+>>> mylist = MyList()
+>>> mylist
+[]
+>>> print(mylist)
+[]
