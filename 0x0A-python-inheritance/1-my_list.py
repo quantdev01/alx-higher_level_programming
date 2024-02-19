@@ -1,7 +1,17 @@
 #!/usr/bin/python3
+"""
+My module python inherite
+"""
+
 
 class MyList(list):
+    """
+    class MyList inherits from list
+    """
     def print_sorted(self):
+        """
+        class method that prints the sorted list
+        """
         mylist = self[:]
 
         k = 0
