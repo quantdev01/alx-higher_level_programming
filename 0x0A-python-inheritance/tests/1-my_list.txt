@@ -17,5 +17,7 @@
 >>> mylist = MyList()
 >>> mylist
 []
+>>> mylist.print_sorted()
+[]
 >>> print(mylist)
 []
