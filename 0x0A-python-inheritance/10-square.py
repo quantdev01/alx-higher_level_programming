@@ -15,3 +15,9 @@ class Square(Rectangle):
         """
         self.__size = size
         Rectangle.integer_validator(self, "Size", size)
+
+    def __str__(self):
+        return "[Rectangle] {}/{}".format(self.__size, self.__size)
+
+    def area(self):
+        return self.__size * self.__size
