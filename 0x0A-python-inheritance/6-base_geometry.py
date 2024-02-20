@@ -13,4 +13,3 @@ class BaseGeometry:
         area of geometry
         """
         raise Exception("area() is not implemented")
-    pass
