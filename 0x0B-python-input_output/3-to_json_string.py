@@ -12,4 +12,7 @@ def to_json_string(my_obj):
     Return:
         return - json object
     """
-    return json.dumps(my_obj)
+    if (my_obj is not type(set)):
+        return json.dumps(my_obj)
+    else:
+        return list(my_obj)
