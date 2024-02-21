@@ -31,5 +31,3 @@ class Student:
         json['first_name'] = self.first_name
         json['last_name'] = self.last_name
         json['age'] = self.age
-        return json 
-
