@@ -20,34 +20,80 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+        # -----------------------
+        # -------Task 3----------
+
+        # Exception handling width and height
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+
+        # Exception handling for x and y, x and y are position of the rectangle
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
+
+    # ---------Task 2----------
+
     @property
-    def get_width(self):
+    def width(self):
         return self.__width
 
-    @get_width.setter
-    def set_width(self, width):
+    @width.setter
+    def width(self, width):
         self.__width = width
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
 
     @property
-    def get_height(self):
-        return self_height
+    def height(self):
+        return self.__height
 
-    @get_height.setter
-    def set_height(self, height):
+    @height.setter
+    def height(self, height):
         self.__height = height
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
 
     @property
-    def get_x(self):
+    def x(self):
         return self.__x
 
-    @get_x.setter
-    def set_x(self, x):
+    @x.setter
+    def x(self, x):
         self.__x = x
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
+        if x <= 0:
+            raise ValueError("x must be >= 0")
 
     @property
-    def get_y(self):
+    def y(self):
         return self.__y
 
-    @get_y.setter
-    def set_y(self, y):
+    @y.setter
+    def y(self, y):
         self.__y = y
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        if y <= 0:
+            raise ValueError("y must be >= 0")
+
+    def area(self):
+        return self.__width * self.__height
