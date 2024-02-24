@@ -50,9 +50,17 @@ class RectangleTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             b.x = None 
 
-        # Task 4 Tests
+        # Task 4 Tests calculate area
 
         a = Rectangle(2, 5)
 
         self.assertEqual(a.area(), 10)
 
+        # Task 5 Test display function
+        
+        self.assertEqual(a.display(), None)
+
+        # Task 6 Test, implement __str__
+
+
+        self.assertEqual(a.__str__(), "[Rectangle] ({}) 0/0 - 2/5".format(a.id))

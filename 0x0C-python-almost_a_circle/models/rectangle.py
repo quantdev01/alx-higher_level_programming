@@ -95,5 +95,63 @@ class Rectangle(Base):
         if y <= 0:
             raise ValueError("y must be >= 0")
 
+    # Task 4 
+
     def area(self):
         return self.__width * self.__height
+
+    # Task 5 and 7 -> manage y and x position
+
+    def display(self):
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for j in range(self.__x):
+                print(" ", end="")
+            for j in range(self.__width):
+                print("#", end="")
+            print()
+
+    # Task 6
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    # Task 8
+
+    def update(self, *args, **kwargs):
+        if len(args) != 0:
+            if len(args) == 1:
+                self.id = args[0]
+
+            if len(args) == 2:
+                self.id = args[0]
+                self.__width = args[1]
+            if len(args) == 3:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+            if len(args) == 4:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+            if len(args) == 5:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+        else:
+            # Update class attributes using dictionary kwargs
+
+            if 'id' in kwargs:
+                self.id = kwargs['id'] 
+            if 'width' in kwargs:
+                self.__width = kwargs['width']
+            if 'height' in kwargs:
+                self.__height = kwargs['height']
+            if 'x' in kwargs:
+                self.__x = kwargs['x']
+            if 'y' in kwargs:
+                self.__y = kwargs['y']
