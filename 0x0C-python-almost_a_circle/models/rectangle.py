@@ -49,10 +49,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ width docu """
         return self.__width
 
     @width.setter
     def width(self, width):
+        """ width setter """
         self.__width = width
         if type(width) is not int:
             raise TypeError("width must be an integer")
@@ -61,10 +63,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ height getter """
         return self.__height
 
     @height.setter
     def height(self, height):
+        """ height setter """
         self.__height = height
         if type(height) is not int:
             raise TypeError("height must be an integer")
@@ -73,10 +77,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ x getter """
         return self.__x
 
     @x.setter
     def x(self, x):
+        """ x setter """
         self.__x = x
         if type(x) is not int:
             raise TypeError("x must be an integer")
@@ -85,10 +91,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ y getter """
         return self.__y
 
     @y.setter
     def y(self, y):
+        """ y setter """
         self.__y = y
         if type(y) is not int:
             raise TypeError("y must be an integer")
@@ -98,11 +106,13 @@ class Rectangle(Base):
     # Task 4
 
     def area(self):
+        """ area get """
         return self.__width * self.__height
 
     # Task 5 and 7 -> manage y and x position
 
     def display(self):
+        """ Display the rectangle """
         for i in range(self.__y):
             print()
         for i in range(self.__height):
@@ -115,12 +125,14 @@ class Rectangle(Base):
     # Task 6
 
     def __str__(self):
+        """ return str """
         return "[Rectangle] ({}) {}/{} - {}/{}\
 ".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     # Task 8
 
     def update(self, *args, **kwargs):
+        """ updates the rectangle """
         if len(args) != 0:
             if len(args) == 1:
                 self.id = args[0]
@@ -160,6 +172,7 @@ class Rectangle(Base):
     # Task 13 function to dictionary
 
     def to_dictionary(self):
+        """ rectangle attributes to dictionary """
         my_dict = {
                 'id': self.id,
                 'width': self.width,
