@@ -2,6 +2,7 @@
 """
 Module python3
 """
+import json
 
 
 class Base:
@@ -18,3 +19,36 @@ class Base:
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    # Task 15 : to json string function
+
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None:
+            return []
+        else:
+            return json.dumps(list_dictionaries)
+
+    # Task 16 : Json string to file
+
+    def save_to_file(list_objs):
+        my_obj_list = []
+
+        for obj in list_objs:
+            my_obj_list.append(obj.to_dictionary())
+
+        my_json = Base.to_json_string(my_obj_list)
+
+        if list_objs is None:
+            with open("Rectangle.json", "w", encoding="utf-8") as file:
+                file.write("")
+        else:
+            with open("Rectangle.json", "w", encoding="utf-8") as file:
+                file.write(str(my_json))
+
+    # Task 17 : json string to python object:
+
+    def from_json_string(json_string):
+        if json_string is None or json_string == []:
+            return []
+        else:
+            return json.loads(json_string)

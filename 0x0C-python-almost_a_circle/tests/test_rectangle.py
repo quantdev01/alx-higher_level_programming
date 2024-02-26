@@ -6,7 +6,6 @@ import unittest
 from models.rectangle import Rectangle
 
 
-
 class RectangleTest(unittest.TestCase):
     """
     This is my rectangle Test class
@@ -46,9 +45,9 @@ class RectangleTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             c.width = -5
         with self.assertRaises(TypeError):
-            c.y  = ""
+            c.y = ""
         with self.assertRaises(TypeError):
-            b.x = None 
+            b.x = None
 
         # Task 4 Tests calculate area
 
@@ -57,10 +56,19 @@ class RectangleTest(unittest.TestCase):
         self.assertEqual(a.area(), 10)
 
         # Task 5 Test display function
-        
-        self.assertEqual(a.display(), None)
 
         # Task 6 Test, implement __str__
 
+        self.assertEqual(a.__str__(), "[Rectangle] \
+({}) {}/{} - {}/{}".format(a.id, a.x, a.y, a.width, a.height))
 
-        self.assertEqual(a.__str__(), "[Rectangle] ({}) 0/0 - 2/5".format(a.id))
+        # task 13 test
+        my_dict = a.to_dictionary()
+
+        self.assertIsInstance(my_dict, dict)
+
+    # Task 16 : Test json string to file
+
+    def test_to_json_in_file(self):
+        b = Rectangle(4, 3)
+        self.assertEqual(Rectangle.save_to_file([b]), None)

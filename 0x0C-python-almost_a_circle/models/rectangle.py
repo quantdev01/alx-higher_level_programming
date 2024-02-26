@@ -95,7 +95,7 @@ class Rectangle(Base):
         if y <= 0:
             raise ValueError("y must be >= 0")
 
-    # Task 4 
+    # Task 4
 
     def area(self):
         return self.__width * self.__height
@@ -115,7 +115,8 @@ class Rectangle(Base):
     # Task 6
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}\
+".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     # Task 8
 
@@ -146,7 +147,7 @@ class Rectangle(Base):
             # Update class attributes using dictionary kwargs
 
             if 'id' in kwargs:
-                self.id = kwargs['id'] 
+                self.id = kwargs['id']
             if 'width' in kwargs:
                 self.__width = kwargs['width']
             if 'height' in kwargs:
@@ -155,3 +156,15 @@ class Rectangle(Base):
                 self.__x = kwargs['x']
             if 'y' in kwargs:
                 self.__y = kwargs['y']
+
+    # Task 13 function to dictionary
+
+    def to_dictionary(self):
+        my_dict = {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
+        return my_dict
