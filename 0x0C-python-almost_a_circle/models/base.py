@@ -27,7 +27,7 @@ class Base:
         My function
         """
         if list_dictionaries is None:
-            return []
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
 
