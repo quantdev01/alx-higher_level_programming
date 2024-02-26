@@ -23,6 +23,9 @@ class Base:
     # Task 15 : to json string function
 
     def to_json_string(list_dictionaries):
+        """
+        My function
+        """
         if list_dictionaries is None:
             return []
         else:
@@ -31,6 +34,7 @@ class Base:
     # Task 16 : Json string to file
 
     def save_to_file(list_objs):
+        """ Save to file """
         my_obj_list = []
 
         for obj in list_objs:
@@ -48,6 +52,7 @@ class Base:
     # Task 17 : json string to python object:
 
     def from_json_string(json_string):
+        """ from json to string """
         if json_string is None or json_string == []:
             return []
         else:
