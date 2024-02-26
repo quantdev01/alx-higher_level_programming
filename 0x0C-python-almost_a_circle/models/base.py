@@ -44,7 +44,7 @@ class Base:
 
         if list_objs is None:
             with open("Rectangle.json", "w", encoding="utf-8") as file:
-                file.write("")
+                file.write()
         else:
             with open("Rectangle.json", "w", encoding="utf-8") as file:
                 file.write(str(my_json))
