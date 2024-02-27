@@ -58,22 +58,8 @@ class Base:
         else:
             return json.loads(json_string)
 
-    # Task 18 : create an instance from dictionary
-
     def create(**dictionary):
-        from models.rectangle import Rectangle
-        dummy = Rectangle(1, 1, 1, 1, 1)
-        dummy.update(**dictionary)
-        return dummy
-
-    # Task 19 : create instances from file
-
-    def load_from_file():
-        from models.rectangle import Rectangle
-        instances_lists = "" 
-
-        with open("Rectangle.json", "r") as file:
-            instances_lists + file.read()
-
-        my_dict = Rectangle.from_json_string(instances_lists)
-        return my_dict
+        # Rectangle = __import__("rectangle").Rectangle
+        from 
+        dummy = Rectangle(0, 0, 0, 0, 0)
+        return dummy.update(**dictionary)
