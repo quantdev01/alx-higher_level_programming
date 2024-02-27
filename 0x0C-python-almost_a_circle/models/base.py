@@ -61,6 +61,7 @@ class Base:
     # Task 18 : create an instance from dictionary
 
     def create(**dictionary):
+        """ create a instance from ddictionary """
         from models.rectangle import Rectangle
         dummy = Rectangle(1, 1, 1, 1, 1)
         dummy.update(**dictionary)
@@ -69,8 +70,9 @@ class Base:
     # Task 19 : create instances from file
 
     def load_from_file():
+        """ load instances from file """
         from models.rectangle import Rectangle
-        instances_lists = "" 
+        instances_lists = ""
 
         with open("Rectangle.json", "r") as file:
             instances_lists + file.read()
