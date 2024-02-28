@@ -78,4 +78,4 @@ class Base:
             instances_lists + file.read()
 
         my_dict = Rectangle.from_json_string(instances_lists)
-        return Rectangle.create(my_dict
+        return Rectangle.create(my_dict)
