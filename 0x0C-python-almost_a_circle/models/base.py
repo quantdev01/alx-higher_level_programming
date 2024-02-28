@@ -44,8 +44,11 @@ class Base:
         my_json = Base.to_json_string(my_obj_list)
 
         if list_objs is None or list_objs == []:
+            """
             with open("Rectangle.json", "w", encoding="utf-8") as file:
                 file.write("")
+            """
+            return
         else:
             with open("Rectangle.json", "w", encoding="utf-8") as file:
                 file.write(str(my_json))
