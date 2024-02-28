@@ -38,18 +38,15 @@ class Base:
         """ Save to file """
         my_obj_list = []
 
-        for obj in list_objs:
-            my_obj_list.append(obj.to_dictionary())
-
-        my_json = Base.to_json_string(my_obj_list)
-
         if list_objs is None or list_objs == []:
-            """
             with open("Rectangle.json", "w", encoding="utf-8") as file:
                 file.write("")
-            """
-            return
         else:
+            for obj in list_objs:
+                my_obj_list.append(obj.to_dictionary())
+
+            my_json = Base.to_json_string(my_obj_list)
+
             with open("Rectangle.json", "w", encoding="utf-8") as file:
                 file.write(str(my_json))
 
