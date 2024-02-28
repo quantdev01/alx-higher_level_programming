@@ -22,6 +22,7 @@ class Base:
 
     # Task 15 : to json string function
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         My function
