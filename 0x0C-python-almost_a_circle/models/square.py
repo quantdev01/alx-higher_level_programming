@@ -69,18 +69,11 @@ class Square(Rectangle):
 
     # Task 18 trynna fix by creating a new function create in the square class
 
+
+"""
     def create(**dictionary):
         """ create a instance from ddictionary """
-
-        dict_len = len(dictionary)
-
-        if dict_len == 4:
-            dummy = Square(1, 1, 1, 1)
-        if dict_len == 3:
-            dummy = Square(1, 1, 1)
-        if dict_len == 2:
-            dummy = Square(1, 1)
-        if dict_len == 1:
-            dummy = Square(1)
-
-        return update(self, **dictionary) 
+        dummy = Square(1)
+        dummy = Square.update(**dictionary)
+        return dummy
+"""
