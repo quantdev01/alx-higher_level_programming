@@ -65,9 +65,9 @@ class Base:
         """ create a instance from ddictionary """
         from models.rectangle import Rectangle
         from models.square import Square
-        dict_len = len(dictionary)
+        import inspect
 
-        print(isinstance(dictionary, Rectangle))
+        dict_len = len(dictionary)
 
         dummy = Rectangle(1, 1)
 
