@@ -77,7 +77,6 @@ class Base:
             dummy = Rectangle(1, 1)
         if dict_len == 1:
             dummy = Rectangle(1)
-        
         dummy.update(**dictionary)
 
         return dummy
