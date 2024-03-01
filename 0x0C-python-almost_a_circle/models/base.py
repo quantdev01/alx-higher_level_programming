@@ -64,7 +64,17 @@ class Base:
     def create(**dictionary):
         """ create a instance from ddictionary """
         from models.rectangle import Rectangle
-        dummy = Rectangle(1, 1, 1, 1, 1)
+        dict_len = len(dictionary)
+        if dict_len == 5:
+            dummy = Rectangle(1, 1, 1, 1, 1)
+        if dict_len == 4:
+            dummy = Rectangle(1, 1, 1, 1)
+        if dict_len == 3:
+            dummy = Rectangle(1, 1, 1)
+        if dict_len == 2:
+            dummy = Rectangle(1, 1)
+        if dict_len == 1:
+            dummy = Rectangle(1)
         dummy.update(**dictionary)
         return dummy
 
