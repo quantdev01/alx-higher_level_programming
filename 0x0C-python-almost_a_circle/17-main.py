@@ -10,5 +10,7 @@ if __name__ == "__main__":
     r2 = Square.create(**r1_dictionary)
     print(r1)
     print(r2)
+    print(type(r1))
+    print(type(r2))
     print(r1 is r2)
     print(r1 == r2)

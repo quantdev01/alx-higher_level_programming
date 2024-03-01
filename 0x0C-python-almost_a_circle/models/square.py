@@ -66,14 +66,3 @@ class Square(Rectangle):
                 'y': self.y
                 }
         return my_dict
-
-    # Task 18 trynna fix by creating a new function create in the square class
-
-
-"""
-    def create(**dictionary):
-        """ create a instance from ddictionary """
-        dummy = Square(1)
-        dummy = Square.update(**dictionary)
-        return dummy
-"""
