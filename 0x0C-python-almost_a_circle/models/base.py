@@ -34,6 +34,7 @@ class Base:
 
     # Task 16 : Json string to file
 
+    @classmethod
     def save_to_file(list_objs):
         """ Save to file """
         my_obj_list = []
