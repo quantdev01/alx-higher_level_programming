@@ -2,7 +2,7 @@
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
 -- creating the user
-CREATE USER 'user_0d_2'@'localhost' IDENTIFIED BY 'hbtn_0d_2';
+CREATE USER 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
 
 -- Giving Select privileges
 GRANT SELECT
