@@ -1,5 +1,5 @@
 -- Reading the user
-CREATE DATABASE IF EXISTS hbtn_0d_2;
+CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
 -- creating the user
 CREATE USER 'user_0d_2' IDENTIFIED BY 'hbtn_0d_2';
