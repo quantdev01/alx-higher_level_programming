@@ -1,0 +1,6 @@
+-- Unique ID
+CREATE TABLE unique_id 
+(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(256)
+);
