@@ -13,8 +13,11 @@ else
 	let i = 0;
 	let j = 0;
 	let num = Number(myArgs[2]);
-	if (num != NaN)
+
+	if (num !== NaN)
 	{
+		console.log('The type is ' + typeof(num));
+		console.log('The conteng is ' + num);
 		while (i < num)
 		{
 			j = 0;
@@ -27,5 +30,7 @@ else
 			i++;
 		}
 	}
+	else
+		console.log('Not a number from inside');
 
 }
