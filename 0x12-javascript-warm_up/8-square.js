@@ -7,21 +7,25 @@ if (myArgs.length === 2)
 	console.log('Missing size');
 }
 else if (typeof(myArgs[2]) === String)
-	console.log('Not a numbe');
+	console.log('Not a number');
 else
 {
 	let i = 0;
 	let j = 0;
-	while (i < myArgs[2])
+	let num = Number(myArgs[2]);
+	if (num != NaN)
 	{
-		j = 0;
-		while (j < myArgs[2])
+		while (i < num)
 		{
-			process.stdout.write('X');
-			j++;
+			j = 0;
+			while (j < num)
+			{
+				process.stdout.write('X');
+				j++;
+			}
+			console.log('');
+			i++;
 		}
-		console.log('');
-		i++;
 	}
 
 }

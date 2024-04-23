@@ -2,11 +2,10 @@
 
 const myArgs = process.argv;
 
-function add(a, b)
-{
-	return a + b;
+function add (a, b) {
+  return a + b;
 }
 
-let sum = add(myArgs[2], myArgs[3]);
+const sum = add(Number(myArgs[2]), Number(myArgs[3]));
 
 console.log(sum);
