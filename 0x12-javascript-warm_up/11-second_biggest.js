@@ -2,36 +2,32 @@
 
 const myArgs = process.argv;
 
-let ln = myArgs.length;
+const ln = myArgs.length;
 
-if (ln <= 3)
-	console.log(0);
-else
-{
-	function getBiggest(myarray)
-	{
-		let i = 2;
-		let n = 0;
-		
-		while (i <= ln)
-		{
-			if (myarray[i] > myarray[i+1])
-			{
-				let temp = myArgs[i];
-				myarray[i] = myarray[i+1];
-				myarray[i+1] = temp; 
-			}
-			i++;
-		}
-		console.log(myarray[myarray.length - 1]);
-		return myarray[ln - 1];
-	}
+if (ln <= 3) { console.log(0); } else {
+  function getBiggest (myarray) {
+    let i = 2;
 
-	getBiggest(myArgs);
+    while (i <= ln) {
+      if (myarray[i] > myarray[i + 1]) {
+        const temp = myArgs[i];
+        myarray[i] = myarray[i + 1];
+        myarray[i + 1] = temp;
+      }
+      i++;
+    }
+    return myarray[ln - 1];
+  }
 
-	myArgs[getBiggest(myArgs)] = 0;
+  /* getting the first big element */
 
-	console.log(myArgs);
+  getBiggest(myArgs);
 
-	getBiggest(myArgs);
+  /* deleting the current biggest element */
+
+  myArgs[ln - 1] = 0;
+
+  /* Calling the function to get the second biggest element and print it out */
+
+  console.log(getBiggest(myArgs));
 }
