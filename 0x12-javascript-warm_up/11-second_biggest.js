@@ -9,7 +9,7 @@ if (ln <= 3) { console.log(0); } else {
     let i = 2;
 
     while (i <= ln) {
-      if (myarray[i] > myarray[i + 1]) {
+      if (Number(myarray[i]) > Number(myarray[i + 1])) {
         const temp = myArgs[i];
         myarray[i] = myarray[i + 1];
         myarray[i + 1] = temp;
