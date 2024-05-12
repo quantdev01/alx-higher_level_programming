@@ -19,7 +19,7 @@ db = MySQLdb.connect(
 
 cursor = db.cursor()
 try:
-    cursor.execute("SELECT * from user_table ORDER BY id ASC")
+    cursor.execute("SELECT * from states ORDER BY id ASC")
     rows = cursor.fetchall()
 except e:
     print("This happend {}".format(e))
