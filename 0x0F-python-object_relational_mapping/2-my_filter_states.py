@@ -22,7 +22,8 @@ else:
 
     cursor = db.cursor()
     try:
-        cursor.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC".format(args[4]))
+        cursor.execute("SELECT * FROM states WHERE name\
+ LIKE '{}' ORDER BY id ASC".format(args[4]))
         rows = cursor.fetchall()
 
         for row in rows:
