@@ -4,9 +4,9 @@ import sys
 
 args = sys.argv
 
-l = len(args)
+ln = len(args)
 
-if l < 4:
+if ln < 4:
     print("Insufusant arguments, need 3 args")
 
 db = MySQLdb.connect(
