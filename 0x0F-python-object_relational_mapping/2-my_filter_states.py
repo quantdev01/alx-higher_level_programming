@@ -18,9 +18,8 @@ else:
             port=3306
             )
 
-    print(f"Args 5 is {args[4]}")
-
     cursor = db.cursor()
+
     try:
         cursor.execute("SELECT * FROM states WHERE name\
  LIKE '{}' ORDER BY id ASC".format(args[4]))
