@@ -19,7 +19,7 @@ db = MySQLdb.connect(
 
 cursor = db.cursor()
 try:
-    cursor.execute("SELECT * from states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * from states WHERE BINARY name LIKE 'N%'")
     rows = cursor.fetchall()
 except e:
     print("This happend {}".format(e))
