@@ -21,9 +21,10 @@ else:
     cursor = db.cursor()
 
     try:
+        name = args[4]
         query = "SELECT * FROM states WHERE BINARY name\
- LIKE '{}' ORDER BY id ASC".format(args[4])
-        cursor.execute(query)
+ LIKE %s ORDER BY id ASC"
+        cursor.execute(query, (name + '%',))
         rows = cursor.fetchall()
 
         for row in rows:
