@@ -21,7 +21,7 @@ else:
     cursor = db.cursor()
 
     try:
-        cursor.execute("SELECT * FROM states WHERE name\
+        cursor.execute("SELECT * FROM states WHERE BINARY name\
  LIKE '{}' ORDER BY id ASC".format(args[4]))
         rows = cursor.fetchall()
 
