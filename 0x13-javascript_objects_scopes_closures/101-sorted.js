@@ -1,12 +1,17 @@
 #!/usr/bin/node
 
-const dict = require('./101-data');
+// const dict = require('./101-data');
 
-let mydict = dict.dict;
+const { dict } = require('./101-data');
 
-let newdict = {}
+const occurrencesDict = {};
 
-const keys = Object.keys(mydict);
-keys.forEach(key => {
-	console.log(`${key}: ${dictionary[key]}`);
-});
+for (const userId in dict) {
+  const occurrences = dict[userId];
+  if (!occurrencesDict[occurrences]) {
+    occurrencesDict[occurrences] = [];
+  }
+  occurrencesDict[occurrences].push(userId);
+}
+
+console.log(occurrencesDict);
