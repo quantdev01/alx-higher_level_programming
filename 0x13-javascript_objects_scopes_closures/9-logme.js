@@ -1,9 +1,7 @@
 #!/usr/bin/node
 
-exports.logMe = function (item)
-{
-	let logTime = 0;
-	return function () {
-		return `${logTime++}: ${item}`;
-	}
-}
+let logTime = 0;
+
+exports.logMe = function (item) {
+  console.log(`${logTime++}: ${item}`);
+};
