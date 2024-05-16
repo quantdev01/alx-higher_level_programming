@@ -13,4 +13,4 @@ function factorial(n)
 }
 
 console.log(factorial(Number(myArg[2])));
-console.log(Number(myArg[2]));
+// console.log(Number(myArg[2]));
