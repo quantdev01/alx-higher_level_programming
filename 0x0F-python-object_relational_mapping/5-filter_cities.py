@@ -28,11 +28,17 @@ else:
         WHERE states.name = %s
         ORDER BY cities.id ASC
         """
-        cursor.execute(query, (name + '%',))
+        cursor.execute(query, (name,))
         rows = cursor.fetchall()
         """for row in rows:
             print(row[0])
         """
-        print(", ".join([city[0] for city in cities]))
+        city_names = [row[0] for row in rows]
+        print(", ".join(city_names))
     except Exception as e:
         print("This happend {}".format(e))
+    finally:
+        if cursor:
+            cursor.close()
+        if db:
+            db.close()
