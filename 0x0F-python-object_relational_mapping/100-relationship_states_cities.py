@@ -10,9 +10,7 @@ from relationship_state import Base, State
 from relationship_city import City
 
 if __name__ == "__main__":
-    """
     # Get MySQL username, password, and database name from 
-    """
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
