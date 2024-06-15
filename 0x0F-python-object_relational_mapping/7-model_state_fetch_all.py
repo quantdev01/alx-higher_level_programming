@@ -1,32 +1,34 @@
 #!/usr/bin/python3
-""" Documenting my python3 """
+"""
+Lists all State objects from the database hbtn_0e_6_usa
+"""
 
-from model_state import Base, State
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 
-args = sys.argv
+if __name__ == "__main__":
+    # Get MySQL username, password, and database name from the command line arguments
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
 
-ln = len(args)
+    # Create an engine to the specified database
+    engine = create_engine(f'mysql+mysqldb://{mysql_username}:{mysql_password}@localhost:3306/{database_name}')
 
-if ln <= 3:
-    print("Insufusant arguments, need 3 args")
+    # Create a configured "Session" class
+    Session = sessionmaker(bind=engine)
 
-username = args[0]
-password = args[1]
-db_name = args[2]
-host = 'localhost'
-port = '3306'
+    # Create a Session
+    session = Session()
 
-database_url = f"mysql+pymysql://{username}:{password}@{host}/{db_name}"
-engine = create_engine(database_url)
+    # Query the database to get all State objects ordered by id
+    states = session.query(State).order_by(State.id).all()
 
-Session = sessionmaker(bind=engine)
+    # Print the results
+    for state in states:
+        print(f"{state.id}: {state.name}")
 
-session = Session()
-
-states = session.query(State).order_by(State.id).all()
-
-for state in states:
-    print(F"{state.id}: {state.name}")
+    # Close the session
+    session.close()
