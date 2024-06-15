@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the class definition of a State
+Contains the class definition of a State and will work as our documentation
 """
 
 from sqlalchemy import Column, Integer, String
